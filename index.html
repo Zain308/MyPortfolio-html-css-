@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio(html/CSS)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Niconne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; 
+    }
+    body{
+        font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: large;
+  background-color: #F0E5D8;
+    }
+    .nav{
+        background-color: #A35C7A;
+        color: #FBF5E5;
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        padding-right: 0;
+        text-decoration: none;
+    }
+    .nav a {
+    color: #FBF5E5; /* Use your desired text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav a:hover {
+    color: #F0E5D8; /* Optional: Change color on hover for better UX */
+}
+
+
+    .nav ul{
+        padding-top: 10px;
+        list-style: none;
+        display: flex;
+        padding-left: 30%;
+        padding-right: 0;
+        text-decoration: none;
+    }
+
+    .nav ul li{
+        color: #FBF5E5;
+        padding-left: 50px;
+        text-decoration: none;
+    }
+    .nav h2{
+        padding-top: 10px;
+    }
+    .hero{
+        font-family: "Niconne", serif;
+  font-weight: 300;
+  font-size: xx-large;
+  font-style: normal;
+    }
+
+    .hero{
+        padding-top: 150px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 80px 2fr;
+        background-color: #A35C7A;
+        color: #FBF5E5;
+        gap: 10px;
+
+    }
+    .hero h1{
+        display: grid;
+        grid-area: 1/2/2/3;
+    }
+
+    .hero img{
+        border-radius: 40%;
+        display: grid;
+        grid-area: 1/3/3/4 ;
+        column-gap: 50px;
+    }
+
+    .hero p{
+        font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: large;
+  height: 40vh;
+  width: 40vw;
+  display: grid;
+  grid-area: 2/2/3/3;
+    }
+
+    .resume{
+        background-color: #FBF5E5;
+        color: #C890A7;
+        height: 100vh;
+        width: 100vw;
+        padding-bottom: 250px;
+        
+    }
+    
+    .resume img{
+        border-radius: 50%;
+        
+    }
+
+    .img-container{
+        padding-top: 30px;
+        padding-left: 40%;
+
+    }
+    .uu{
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 300px;
+        padding-left: 200px;
+        list-style: none;
+        gap: 30px;
+
+    }
+    ul{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+
+    .resume h1{
+        font-size: xx-large;
+    }
+
+   .project{
+    margin-top: 70px;
+    background-color: #F0E5D8;
+
+   } 
+   .about{
+    margin-top: 100px;
+    background-color: #F0E5D8;
+
+   }
+   .project h1{
+    text-align: center;
+    color: #A35C7A;
+    padding-top: 40px;
+    font-weight: 800;
+    font-size: 40px;
+   }
+   .about h1{
+    text-align: center;
+    color: #A35C7A;
+    padding-top: 40px;
+    font-weight: 800;
+    font-size: 40px;
+   }
+   
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0E5D8;
+}
+.card-item {
+    height: 500px;
+    width: 400px;
+    color: #C890A7;
+    border-radius: 20%;
+    background-color: #FBF5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A35C7A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effect */
+.card-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    border-color: #D9AFC1;
+}
+
+.footer{
+    background-color: #A35C7A;
+    height: 30vh;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.icon{
+    height: 35px;
+    width: 35px;
+    margin-left: 0px;
+    border: 1px solid #F0E5D8;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+}
+
+.icon:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    border-color: #D9AFC1;
+}
+.footer {
+    background-color: #A35C7A;
+    color: #FBF5E5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .footer-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    background-color: #FBF5E5;
+    border: 2px solid #FBF5E5;
+    border-radius: 50%;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon a {
+    color: #A35C7A;
+    font-size: 1.5rem;
+}
+
+.icon:hover {
+    background-color: #D9AFC1;
+    border-color: #D9AFC1;
+    transform: scale(1.1);
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #FBF5E5;
+    margin-top: 20px;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+    .icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <section class="nav-container">
+    <div class="nav">
+        <img src="./ZAIN.png" height="60px" width="70px" alt="logo">
+        <h2>Portfolio</h2>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#project">My Projects</a></li>
+            <li><a href="#About">About me</a></li>
+            <li><a href="#Contact">Contact me</a></li>
+        </ul>
+    </div>
+</section>
+    <section class="hero" id="hero">
+        <h1>Here's Zain</h1>
+        <p>I am from Pakistan and currently pursuing a degree in Computer Science. My journey into website development marks an exciting step in learning the fundamentals of computing. I am passionate about programming and enjoy diving into new concepts and technologies. The process of learning not only strengthens my technical skills but also broadens my understanding of how computers work. Each new concept I encounter challenges me to think critically, solve problems creatively, and stay curious. </p>
+        <img src="my.jpeg" height="400px" width="400px" alt="zain1">
+    </section>
+    <section class="resume" id="resume">
+        <div class="img-container">
+            <img src="zain1.jpeg" height="200px" width="200px" alt="MyImage">
+        <h1>Zain ul abideen</h1>
+        </div>
+        <div class="resume-container">
+            
+        <ul class="uu">
+            <li><h3>Education</h3>
+                <ul>
+                    <li>BSCS(2023 to continue)
+                        <ul><li>National university of modern languages</li></ul>
+                    
+                </ul>
+            </li>
+            <li><h3>Experience</h3>
+                <ul><li>Not such Experiencein industry but looking for next</li></ul>
+            </li>
+            <li><h3>Skills</h3>
+                <ul>
+                    <li>LeaderShip</li>
+                    <li>Deep Analysis</li>
+                    <li>Problem Solving</li>
+                    <li>Quick learner</li>
+                    <li>Good communicator</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Projects</h3>
+                <ul>
+                    <li>Ecommerce site for my university Project</li>
+                    
+                </ul>
+            </li>
+            <li><h3>Hobbies</h3>
+            <ul>
+                <li>Coding</li>
+                <li>Reading</li>
+            </ul>
+        </li>
+
+        </ul>
+        </div>
+    </section>
+
+    <section class="project" id="project">
+        
+        <h1>My Projects</h1>
+        <div class="card">
+            
+            <div class="card-item">
+                <img src="p1.png" height="200px" width="300px" alt="plants"><br>
+                This is a university project
+            </div>
+            <div class="card-item">
+                <img src="p2.png" height="200px" width="300px" alt="website"><br>
+                This is a university project
+            </div>
+            <div class="card-item">
+                <img src="p3.png" height="200px" width="300px" alt="store"><br>
+                This is a university project
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h1>About Me</h1>
+        <div class="card">
+            <div class="card-item"><img src="Code.png" height="200px" width="200px" alt="Code" style="border-radius: 25%;   margin-bottom: 30px;">I love to do programming in my free time</div>
+            <div class="card-item"><img src="fb.jpeg" height="200px" width="200px" alt="Football" style="border-radius: 25%; margin-bottom: 30px;">I also playing football for my health</div>
+            <div class="card-item"><img src="gm.jpeg" height="200px" width="200px" alt="gaming" style="border-radius: 25%; margin-bottom: 30px;">I also love gaming in weekends</div>
+            
+        </div>
+    </section>
+    <section class="contact footer" id="contact-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Follow Me On</p>
+                <div class="icons"> 
+                    <div class="icon" id="icon1">
+                        <a href="https://www.facebook.com/profile.php?id=100069155464244" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>    
+                    <div class="icon" id="icon2">
+                        <a href="https://linkedin.com/in/zain-ul-abideen-3b6798266" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>    
+                    <div class="icon" id="icon3">
+                        <a href="https://github.com/Zain308" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>    
+                    <div class="icon" id="icon4">
+                        <a href="https://www.instagram.com/______zyn_________/?hl=en" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>    
+                </div>
+                <p class="footer-note">© 2025 Zain Ul Abideen. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
